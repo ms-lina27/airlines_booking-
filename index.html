@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Premium Airline Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" style="font-size:0.18rem;">
+                <div class="logo-icon" style="width:0.18rem;height:0.18rem;font-size:0.08rem;">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.5H8C7.17 16.5 6.5 15.83 6.5 15V9C6.5 8.17 7.17 7.5 8 7.5H22" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 16.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.5 9.99998V14C2.5 14.83 3.17 15.5 4 15.5H6.5V8.49998H4C3.17 8.49998 2.5 9.16998 2.5 9.99998Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 10.5H22" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 13.5H22" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1>SkyBooker</h1>
+            </a>
+            <nav class="main-nav">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#destinations" class="nav-link">Destinations</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-btn">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Explore the World <span>Without Limits</span></h1>
+                            <p class="hero-subtitle">Discover amazing destinations with our premium flight booking service. Enjoy seamless travel experiences with exclusive deals and world-class service.</p>
+                            <div class="hero-badges">
+                                <div class="hero-badge">
+                                    <div class="badge-icon" style="font-size:0.08rem;">⭐</div>
+                                    <div class="badge-text">
+                                        <span>Trusted by</span>
+                                        <strong>10M+ Travelers</strong>
+                                    </div>
+                                </div>
+                                <div class="hero-badge">
+                                    <div class="badge-icon" style="font-size:0.08rem;">🌍</div>
+                                    <div class="badge-text">
+                                        <span>Serving</span>
+                                        <strong>190+ Countries</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Airplane wing above clouds">
+                            <div class="floating-card card-1">
+                                <div class="card-icon" style="font-size:0.08rem;">✈️</div>
+                                <div class="card-text">
+                                    <span>New York</span>
+                                    <strong>→ Paris</strong>
+                                </div>
+                            </div>
+                            <div class="floating-card card-2">
+                                <div class="card-icon" style="font-size:0.08rem;">🔄</div>
+                                <div class="card-text">
+                                    <span>Instant</span>
+                                    <strong>Booking</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="container">
+                    <div class="search-card">
+                        <div class="search-tabs">
+                            <button class="tab active">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 12C17.5 15.04 15.04 17.5 12 17.5C8.96 17.5 6.5 15.04 6.5 12C6.5 8.96 8.96 6.5 12 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 6L12 10L14 2L16 6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                One Way
+                            </button>
+                            <button class="tab">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 12C17.5 15.04 15.04 17.5 12 17.5C8.96 17.5 6.5 15.04 6.5 12C6.5 8.96 8.96 6.5 12 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.5 4C14.5 5.38 13.38 6.5 12 6.5C10.62 6.5 9.5 5.38 9.5 4C9.5 2.62 10.62 1.5 12 1.5C13.38 1.5 14.5 2.62 14.5 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Round Trip
+                            </button>
+                            <button class="tab">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Multi-City
+                            </button>
+                        </div>
+                        
+                        <form id="searchForm" action="search.php" method="GET">
+                            <div class="search-grid">
+                                <div class="form-group">
+                                    <label for="origin">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 13.43C13.7231 13.43 15.12 12.0331 15.12 10.31C15.12 8.58687 13.7231 7.19 12 7.19C10.2769 7.19 8.88 8.58687 8.88 10.31C8.88 12.0331 10.2769 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M3.62001 8.49C5.59001 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.39001 20.54C5.63001 17.88 2.47001 13.57 3.62001 8.49Z" stroke="currentColor" stroke-width="1.5"/>
+                                        </svg>
+                                        From
+                                    </label>
+                                    <input type="text" id="origin" name="origin" placeholder="City or Airport" required>
+                                </div>
+                                
+                                <div class="swap-button">
+                                    <button type="button" onclick="swapLocations()">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 5H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.5 19H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 9.5L9 5.5L13 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 14.5L15 18.5L11 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="destination">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 13.43C13.7231 13.43 15.12 12.0331 15.12 10.31C15.12 8.58687 13.7231 7.19 12 7.19C10.2769 7.19 8.88 8.58687 8.88 10.31C8.88 12.0331 10.2769 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M3.62001 8.49C5.59001 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.39001 20.54C5.63001 17.88 2.47001 13.57 3.62001 8.49Z" stroke="currentColor" stroke-width="1.5"/>
+                                        </svg>
+                                        To
+                                    </label>
+                                    <input type="text" id="destination" name="destination" placeholder="City or Airport" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="departure_date">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.5 9.09H20.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15.6947 13.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15.6947 16.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11.9955 13.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11.9955 16.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.29431 13.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Departure
+                                    </label>
+                                    <input type="date" id="departure_date" name="departure_date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="passengers">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 7.16C17.94 7.15 17.87 7.15 17.81 7.16C16.43 7.11 15.33 5.98 15.33 4.58C15.33 3.15 16.48 2 17.91 2C19.34 2 20.49 3.16 20.49 4.58C20.48 5.98 19.38 7.11 18 7.16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16.9699 14.44C18.3399 14.67 19.8499 14.43 20.9099 13.72C22.3199 12.78 22.3199 11.24 20.9099 10.3C19.8399 9.59004 18.3099 9.35003 16.9399 9.59003" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5.96998 7.16C6.02998 7.15 6.09998 7.15 6.15998 7.16C7.53998 7.11 8.63998 5.98 8.63998 4.58C8.63998 3.15 7.48998 2 6.05998 2C4.62998 2 3.47998 3.16 3.47998 4.58C3.48998 5.98 4.58998 7.11 5.96998 7.16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7 14.44C5.63 14.67 4.12 14.43 3.06 13.72C1.65 12.78 1.65 11.24 3.06 10.3C4.13 9.59004 5.66 9.35003 7.03 9.59003" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 14.63C11.94 14.62 11.87 14.62 11.81 14.63C10.43 14.58 9.32996 13.45 9.32996 12.05C9.32996 10.62 10.48 9.47 11.91 9.47C13.34 9.47 14.49 10.63 14.49 12.05C14.48 13.45 13.38 14.59 12 14.63Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.08997 17.78C7.67997 18.72 7.67997 20.26 9.08997 21.2C10.69 22.27 13.31 22.27 14.91 21.2C16.32 20.26 16.32 18.72 14.91 17.78C13.32 16.72 10.69 16.72 9.08997 17.78Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Passengers
+                                    </label>
+                                    <div class="select-wrapper">
+                                        <select id="passengers" name="passengers">
+                                            <option value="1">1 Passenger</option>
+                                            <option value="2">2 Passengers</option>
+                                            <option value="3">3 Passengers</option>
+                                            <option value="4">4 Passengers</option>
+                                            <option value="5">5 Passengers</option>
+                                            <option value="6">6 Passengers</option>
+                                        </select>
+                                        <svg class="select-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group search-btn-container">
+                                    <button type="submit" class="search-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22 22L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Search Flights
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations" id="destinations">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Destinations</h2>
+                    <p>Explore our most booked destinations with exclusive deals</p>
+                </div>
+                
+                <div class="destinations-grid">
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Paris">
+                        </div>
+                        <div class="destination-content">
+                            <h3>Paris</h3>
+                            <p>France</p>
+                            <div class="destination-price">
+                                <span>from</span>
+                                <strong>$299</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Tokyo">
+                        </div>
+                        <div class="destination-content">
+                            <h3>Tokyo</h3>
+                            <p>Japan</p>
+                            <div class="destination-price">
+                                <span>from</span>
+                                <strong>$799</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="New York">
+                        </div>
+                        <div class="destination-content">
+                            <h3>New York</h3>
+                            <p>United States</p>
+                            <div class="destination-price">
+                                <span>from</span>
+                                <strong>$349</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Sydney">
+                        </div>
+                        <div class="destination-content">
+                            <h3>Sydney</h3>
+                            <p>Australia</p>
+                            <div class="destination-price">
+                                <span>from</span>
+                                <strong>$899</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose SkyBooker</h2>
+                    <p>Experience the difference with our premium service</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="width:0.3rem;height:0.3rem;font-size:0.1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Global Coverage</h3>
+                        <p>Access to over 500+ airlines and 100,000+ routes worldwide for maximum flexibility.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon" style="width:0.3rem;height:0.3rem;font-size:0.1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.49 2.23L5.50003 4.11C4.35003 4.54 3.41003 5.9 3.41003 7.12V14.55C3.41003 15.73 4.19003 17.28 5.14003 17.99L9.44003 21.2C10.85 22.26 13.17 22.26 14.58 21.2L18.88 17.99C19.83 17.28 20.61 15.73 20.61 14.55V7.12C20.61 5.89 19.67 4.53 18.52 4.1L13.53 2.23C12.68 1.92 11.32 1.92 10.49 2.23Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 15.5C14.2091 15.5 16 13.7091 16 11.5C16 9.29086 14.2091 7.5 12 7.5C9.79086 7.5 8 9.29086 8 11.5C8 13.7091 9.79086 15.5 12 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Secure Booking</h3>
+                        <p>Advanced encryption and secure payment methods to protect your personal information.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon" style="width:0.3rem;height:0.3rem;font-size:0.1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.5 9.09H20.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.9955 13.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.29431 13.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Flexible Scheduling</h3>
+                        <p>Change your travel dates with minimal or no fees on selected bookings.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon" style="width:0.3rem;height:0.3rem;font-size:0.1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 12H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 16V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our dedicated customer service team is available around the clock to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Trusted by millions of travelers worldwide</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <p class="testimonial-text">"SkyBooker made booking my international flight so easy. The interface is intuitive and I found a great deal in minutes!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Frequent Traveler</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <p class="testimonial-text">"I saved over $300 on my family vacation flights. The comparison tool is fantastic and showed me options I wouldn't have found elsewhere."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Family Traveler</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <p class="testimonial-text">"As a business traveler, I need reliability and efficiency. SkyBooker delivers both, plus their customer service is exceptional."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                            </div>
+                            <div class="author-info">
+                                <h4>Emma Rodriguez</h4>
+                                <p>Business Executive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Take Off?</h2>
+                    <p>Join millions of satisfied travelers who book with SkyBooker. Start your journey today!</p>
+                    <a href="#" class="cta-btn">Create Free Account</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="font-size:0.18rem;">
+                        <div class="logo-icon" style="width:0.18rem;height:0.18rem;font-size:0.08rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.5H8C7.17 16.5 6.5 15.83 6.5 15V9C6.5 8.17 7.17 7.5 8 7.5H22" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 16.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.5 9.99998V14C2.5 14.83 3.17 15.5 4 15.5H6.5V8.49998H4C3.17 8.49998 2.5 9.16998 2.5 9.99998Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 10.5H22" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 13.5H22" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h1>SkyBooker</h1>
+                    </a>
+                    <p>Your trusted partner for seamless flight booking experiences worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" style="width:0.7rem;height:0.7rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 9.3v2.9h2.6c0.2 0 0.3 0.1 0.3 0.3l-0.4 1.9c0 0.1-0.2 0.2-0.3 0.2H14V21h-3v-6.4H9.3c-0.2 0-0.3-0.1-0.3-0.3v-1.9c0-0.2 0.1-0.3 0.3-0.3H11V9c0-1.7 1.3-3 3-3h2.7c0.2 0 0.3 0.1 0.3 0.3v2.4c0 0.2-0.1 0.3-0.3 0.3h-2.4C14.1 9 14 9.1 14 9.3z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                <path d="M15 22H9c-5 0-7-2-7-7V9c0-5 2-7 7-7h6c5 0 7 2 7 7v6c0 5-2 7-7 7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" style="width:0.7rem;height:0.7rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 6.62a8.18 8.18 0 0 1-2.36.65 4.12 4.12 0 0 0 1.81-2.27 8.26 8.26 0 0 1-2.61 1 4.11 4.11 0 0 0-7 3.74 11.67 11.67 0 0 1-8.45-4.29 4.11 4.11 0 0 0 1.27 5.49 4.18 4.18 0 0 1-1.86-.52v.05a4.11 4.11 0 0 0 3.29 4 4.21 4.21 0 0 1-1.86.07 4.11 4.11 0 0 0 3.83 2.85A8.22 8.22 0 0 1 2 19.06a11.63 11.63 0 0 0 6.29 1.85A11.62 11.62 0 0 0 20 9.23v-.53a8.43 8.43 0 0 0 2-2.12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" style="width:0.7rem;height:0.7rem;">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.6361 7H17.6477" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest deals and travel inspiration directly to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkyBooker. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We accept:</span>
+                    <div class="payment-icons">
+                        <div class="payment-icon" style="font-size:0.08rem;">Visa</div>
+                        <div class="payment-icon" style="font-size:0.08rem;">MC</div>
+                        <div class="payment-icon" style="font-size:0.08rem;">Amex</div>
+                        <div class="payment-icon" style="font-size:0.08rem;">PayPal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function swapLocations() {
+            const origin = document.getElementById('origin');
+            const destination = document.getElementById('destination');
+            const temp = origin.value;
+            origin.value = destination.value;
+            destination.value = temp;
+        }
+        
+        // Add active class to tabs
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
